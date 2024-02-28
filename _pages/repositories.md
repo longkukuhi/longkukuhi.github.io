@@ -17,13 +17,6 @@ nav_order: 4
   {% endfor %}
 </div>
 
----
-
-
----
-
-{% endfor %}
-{% endif %}
 {% endif %}
 
 ## GitHub Repositories
