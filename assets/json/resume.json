@@ -31,7 +31,7 @@
       "endDate": "2024-11-01",
       "summary": "Tutor for courses: Recommendation system, Text as Data, Introduction of Data Science, Programming, Machine Learning, etc.",
       "highlights": ["Teaching and supervision"]
-    },
+    }
   ],
   "education": [
     {
@@ -42,6 +42,5 @@
       "startDate": "2020-11-01",
       "endDate": "2024-06-01",
     }
-  ],
-
+  ]
 }
