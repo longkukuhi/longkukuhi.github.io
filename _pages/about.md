@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
+subtitle: <a href='https://www.gla.ac.uk/schools/computing/research/researchsections/ida-section/informationretrieval/'>University of Glasgow</a>. Glasgow. long575114720@gmail.com
 
 profile:
   align: right
