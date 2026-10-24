@@ -20,6 +20,9 @@ layout: default
       {% if page.description %}
         <p class="post-description">{{ page.description }}</p>
       {% endif %}
+      {% if page.cv_pdf %}
+        <p><a href="{{ page.cv_pdf | prepend: 'assets/pdf/' | relative_url }}">Download the full academic CV (PDF)</a></p>
+      {% endif %}
     </header>
 
     <article>
@@ -67,6 +70,9 @@ layout: default
       {% if page.description %}
         <p class="post-description">{{ page.description }}</p>
       {% endif %}
+      {% if page.cv_pdf %}
+        <p><a href="{{ page.cv_pdf | prepend: 'assets/pdf/' | relative_url }}">Download the full academic CV (PDF)</a></p>
+      {% endif %}
     </header>
 
     <article>
@@ -80,7 +86,11 @@ layout: default
           {% if data[0] == 'meta' or data[1].size == 0 %} {% continue %} {% endif %}
           <a class="anchor" id="{{ data[0] }}"></a>
           <div class="card mt-3 p-3">
-            <h3 class="card-title font-weight-medium">{{ data[0] | capitalize }}</h3>
+            <h3 class="card-title font-weight-medium">
+              {% assign section_key = data[0] %}
+              {% assign section_title = section_key | capitalize -%}
+              {{- site.data.resume_section_titles[section_key] | default: section_title }}
+            </h3>
             <div>
               {% case data[0] %}
                 {% when 'basics' %}

@@ -6,7 +6,7 @@ title: blank # the website title (if blank, full name will be used instead)
 first_name: Zijun
 middle_name:
 last_name: Long
-email: long575114720@gmail.com
+email: longkukuhi@gmail.com
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   Zijun Long researches artificial intelligence, multimodal learning, computer vision, and natural language processing at Hunan University.
 footer_text: >
@@ -319,7 +319,7 @@ filtered_bibtex_keywords:
   [abbr, abstract, altmetric, arxiv, bibtex_show, blog, code, html, pdf, poster, preview, selected, slides, supp, video, website]
 
 # Maximum number of authors to be shown for each publication (more authors are visible on click)
-max_author_limit: 3 # leave blank to always show all authors
+max_author_limit: 6 # leave blank to always show all authors
 more_authors_animation_delay: 10 # more authors are revealed on click using animation; smaller delay means faster animation
 
 # Enables publication thumbnails. If disabled, none of the publications will display thumbnails, even if specified in the bib entry.
@@ -466,3 +466,7 @@ jsonresume:
   - basics
   - work
   - education
+  - publications
+  - projects
+  - awards
+  - volunteer
