@@ -34,6 +34,12 @@ class SiteLinksTest(unittest.TestCase):
             )
             self.assertEqual(check_site(root, "https://example.com/site/"), (2, []))
 
+    def test_bare_origin_is_the_homepage(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / "index.html").write_text('<a href="https://example.com">Home</a>')
+            self.assertEqual(check_site(root, "https://example.com/"), (1, []))
+
     def test_empty_site_does_not_pass(self):
         with tempfile.TemporaryDirectory() as directory:
             with self.assertRaises(ValueError):

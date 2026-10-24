@@ -45,7 +45,7 @@ def check_site(root, site_url):
             url = urlsplit(urljoin(page_url, reference))
             if url.scheme not in ("http", "https") or url.netloc != origin.netloc:
                 continue
-            path = unquote(url.path)
+            path = unquote(url.path or "/")
             if not path.startswith(prefix):
                 errors.add((relative, reference))
                 continue
