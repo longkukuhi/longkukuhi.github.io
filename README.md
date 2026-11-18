@@ -4,13 +4,13 @@ Personal academic website for Zijun Long at Hunan University. The site presents 
 
 ## Edit the site
 
-| Content | Source |
-| --- | --- |
-| Homepage biography and profile | [About page](_pages/about.md) |
-| Publications and selected papers on the homepage | [BibTeX entries](_bibliography/papers.bib) |
-| News announcements | [News entries](_news/) |
-| Project descriptions | [Project pages](_projects/) |
-| Site identity, URL and navigation settings | [Jekyll configuration](_config.yml) and [pages](_pages/) |
+| Content                                          | Source                                                   |
+| ------------------------------------------------ | -------------------------------------------------------- |
+| Homepage biography and profile                   | [About page](_pages/about.md)                            |
+| Publications and selected papers on the homepage | [BibTeX entries](_bibliography/papers.bib)               |
+| News announcements                               | [News entries](_news/)                                   |
+| Project descriptions                             | [Project pages](_projects/)                              |
+| Site identity, URL and navigation settings       | [Jekyll configuration](_config.yml) and [pages](_pages/) |
 
 For a new paper, add the BibTeX entry and set `selected={true}` if it should also appear on the homepage. The theme's publication formatting and other options are documented in the [customization guide](CUSTOMIZE.md).
 
