@@ -1,0 +1,32 @@
+RAD:
+  venue: ICML 2026
+  paper: zhang2026rad
+  description: Detect and localize visual anomalies by comparing image patches with a bank of normal references.
+ADaFuSE:
+  venue: SIGIR 2026
+  paper: zhang2026adafuse
+  description: Search for images from an evolving dialogue by learning how much weight to give its text and a diffusion-generated illustration.
+RoboEye:
+  venue: ICRA 2026
+  paper: zhang2026roboeye
+  description: Identify a robot’s picked object using 2D retrieval and check difficult matches against 3D keypoints.
+DAR:
+  venue: SIGIR 2025
+  paper: long2025dar
+  description: Combine a dialogue and a diffusion-generated image to retrieve photographs without task-specific training. The repository links to the evaluator.
+RoboLLM:
+  venue: ICRA 2024
+  paper: long2023robollm
+  description: Adapt a vision–language encoder to identify picked objects and detect defects in images from a robotic warehouse.
+CrisisViT:
+  venue: ISCRAM 2023
+  paper: long2024crisisvit
+  description: Classify social-media images from disasters by event type, informativeness, humanitarian category and damage severity.
+LaCViT:
+  venue: ICASSP 2024
+  paper: long2023lacvit
+  description: Fine-tune vision transformers for image classification with label-aware contrastive learning.
+MultiWay-Adapter:
+  venue: ICASSP 2024
+  paper: long2023multiway
+  description: Adapt a BEiT-3 encoder for image-to-text and text-to-image retrieval with learned adapters and cross-modal alignment.

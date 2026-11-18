@@ -1,5 +1,7 @@
 ---
-layout: post
+layout: atlas_news_item
+atlas_css: /assets/css/atlas-resources.css
+title: MultiWay-Adapter and LaCViT accepted at ICASSP 2024
 inline: True
 date: 2023-12-18
 related_posts: false

@@ -1,0 +1,27 @@
+- name: RoboEye
+  id: roboeye
+  topic: Robotic perception
+  caption: Robotic object identification
+  venue: ICRA 2026
+  title: Identifying what a robot picks up
+  description: RoboEye first ranks objects by their appearance in 2D. When similar candidates are hard to tell apart, it checks whether their 3D keypoints match.
+  alt: RoboEye first ranks candidate objects using 2D features, then refines ambiguous matches using 3D keypoints.
+  paper: https://doi.org/10.1109/ICRA57385.2026.11696377
+- name: RAD
+  id: rad
+  topic: Anomaly detection
+  caption: Retrieval-based anomaly detection
+  venue: ICML 2026
+  title: Finding defects by looking up normal examples
+  description: RAD compares local features of a test image with those of defect-free examples. Regions without a close match are flagged for inspection.
+  alt: RAD matches test patches against a memory of normal features at several layers to produce an anomaly heatmap.
+  paper: https://proceedings.mlr.press/v306/zhang26ck.html
+- name: ADaFuSE
+  id: adafuse
+  topic: Image retrieval
+  caption: Interactive text-to-image retrieval
+  venue: SIGIR 2026
+  title: Searching with words and generated images
+  description: A generated image can capture a searcher’s intent or introduce distracting details. ADaFuSE learns how much weight to give each image and text cue.
+  alt: ADaFuSE combines a dialogue and a generated image using an adaptive gate and semantic experts to retrieve a target image.
+  paper: https://doi.org/10.1145/3805712.3809836

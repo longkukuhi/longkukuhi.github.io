@@ -1,0 +1,11 @@
+---
+---
+<article class="selected-paper" id="{{ entry.key | escape }}">
+  <p class="selected-venue">{{ entry.abbr | escape }} · {{ entry.year | escape }}</p>
+  <div>
+    <h3>
+      <a href="{{ '/publications/' | relative_url }}#{{ entry.key | escape }}">{{ entry.title }}</a>
+    </h3>
+    <p class="selected-authors">{% include atlas_publications.liquid authors=entry.author_array %}</p>
+  </div>
+</article>

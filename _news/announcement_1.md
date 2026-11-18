@@ -1,5 +1,7 @@
 ---
-layout: post
+layout: atlas_news_item
+atlas_css: /assets/css/atlas-resources.css
+title: RoboLLM accepted at ICRA 2024
 date: 2024-01-31
 inline: true
 related_posts: false

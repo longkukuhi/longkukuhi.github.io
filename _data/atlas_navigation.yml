@@ -1,0 +1,12 @@
+- label: About
+  url: /about/
+- label: Research
+  url: /#research
+- label: Publications
+  url: /publications/
+- label: Research code
+  url: /repositories/
+- label: News
+  url: /news/
+- label: Teaching & service
+  url: /teaching/

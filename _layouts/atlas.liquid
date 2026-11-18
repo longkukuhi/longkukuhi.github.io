@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="{{ site.lang | default: 'en' }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0b2d4b">
+    <meta name="description" content="{{ page.description | default: site.description | strip_html | strip | escape }}">
+    <link rel="canonical" href="{{ page.url | absolute_url }}">
+    <title>
+      {% unless page.url == '/' %}{{ page.title | escape }} · {% endunless %}
+      Zijun Long
+    </title>
+    <link rel="stylesheet" href="{{ '/assets/css/atlas.css' | relative_url }}">
+    {% if page.atlas_css %}<link rel="stylesheet" href="{{ page.atlas_css | relative_url }}">{% endif %}
+    <script src="{{ '/assets/js/atlas-theme.js' | relative_url }}"></script>
+    {% if page.atlas_js %}<script defer src="{{ page.atlas_js | relative_url }}"></script>{% endif %}
+  </head>
+  <body>
+    <a class="skip" href="#main-content">Skip to content</a>
+    <div class="site">
+      <header class="masthead">
+        <a class="brand" href="{{ '/' | relative_url }}" aria-label="Zijun Long, homepage"
+          ><span class="mark" aria-hidden="true">zl.</span><span>Zijun Long</span></a
+        >
+        <nav aria-label="Main navigation">
+          {% for item in site.data.atlas_navigation %}
+            <a
+              href="{{ item.url | relative_url }}"
+              {% if page.url == item.url %}
+                aria-current="page"
+              {% endif %}
+            >
+              {{- item.label | escape -}}
+            </a>
+          {% endfor %}
+        </nav>
+        <button type="button" class="theme-toggle" aria-label="Dark mode" aria-pressed="false" title="Dark mode" hidden>
+          <span aria-hidden="true">◐</span>
+        </button>
+      </header>
+      <main id="main-content" tabindex="-1">{{ content }}</main>
+      <footer class="atlas-footer">
+        <span>© {{ 'now' | date: '%Y' }} Zijun Long · Hunan University</span>
+        <div>
+          <a href="mailto:{{ site.email }}">Email</a>
+          <a href="https://scholar.google.com/citations?user={{ site.scholar_userid }}">Google Scholar</a>
+          <a href="https://github.com/{{ site.github_username }}">GitHub</a>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

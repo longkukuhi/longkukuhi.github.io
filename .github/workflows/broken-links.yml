@@ -50,5 +50,5 @@ jobs:
           fail: true
           # Unsplash returns HTTP 401 to CI crawlers; keep its visible photo-credit link.
           # The generated-site check separately validates all local links and assets.
-          # removed md files that include liquid tags
-          args: --exclude '^https://unsplash\.com/?$' --exclude-path README.md --exclude-path _pages/404.md --exclude-path _pages/blog.md --exclude-path _posts/2018-12-22-distill.md --verbose --no-progress './**/*.md' './**/*.html'
+          # Liquid interpolations are URLs only after rendering. The deploy job checks those site paths.
+          args: --exclude '(?i)(%7b%7b|\{\{)' --exclude '^https://unsplash\.com/?$' --exclude-path README.md --exclude-path _pages/404.md --exclude-path _pages/blog.md --exclude-path _posts/2018-12-22-distill.md --verbose --no-progress './**/*.md' './**/*.html'
