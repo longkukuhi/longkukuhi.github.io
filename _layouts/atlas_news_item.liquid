@@ -1,0 +1,11 @@
+---
+layout: atlas
+---
+<article class="resources-archive update-detail">
+  <a class="updates-back" href="{{ '/news/' | relative_url }}"><span aria-hidden="true">←</span> All news</a>
+  <header class="resources-heading">
+    <h1>{{ page.title | escape }}</h1>
+    <time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: '%d %B %Y' }}</time>
+  </header>
+  <div class="updates-copy">{{ content }}</div>
+</article>

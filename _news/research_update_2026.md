@@ -1,5 +1,7 @@
 ---
-layout: post
+layout: atlas_news_item
+atlas_css: /assets/css/atlas-resources.css
+title: Four additions to the publication list
 date: 2026-10-24
 inline: true
 related_posts: false

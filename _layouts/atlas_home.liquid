@@ -1,0 +1,108 @@
+---
+layout: atlas
+---
+<div class="layout">
+  <aside class="profile" id="profile" aria-labelledby="profile-name">
+    <div class="profile-text">
+      <p class="eyebrow affiliation">Hunan University</p>
+      <h1 id="profile-name">
+        Zijun<br>
+        Long<span lang="zh" class="name-zh">龙子俊</span>
+      </h1>
+      <p class="role">Assistant Professor</p>
+      <p class="department">College of Electrical and Information Engineering</p>
+    </div>
+    <div class="portrait-mount">
+      <img class="portrait" src="{{ '/assets/img/prof_pic.jpg' | relative_url }}" alt="Portrait of Zijun Long" width="1279" height="1792">
+    </div>
+    <div class="biography">
+      {{ content }}
+      <a href="{{ '/about/' | relative_url }}">About &amp; education →</a>
+      <a href="{{ '/teaching/' | relative_url }}">Teaching &amp; service →</a>
+    </div>
+    <div class="identifiers">
+      <a class="email" href="mailto:{{ site.email }}">{{ site.email }}</a>
+      <a href="https://scholar.google.com/citations?user={{ site.scholar_userid }}">Google Scholar</a>
+      <a href="https://orcid.org/0000-0002-2008-960X">ORCID</a>
+      <a href="https://github.com/{{ site.github_username }}">GitHub</a>
+      <a href="https://x.com/{{ site.x_username }}">X</a>
+    </div>
+  </aside>
+  <div class="work">
+    <section id="research" aria-labelledby="atlas-title">
+      <header class="section-heading">
+        <h2 id="atlas-title">Vision <em>atlas</em></h2>
+        <p>Selected projects in computer vision and multimodal learning.</p>
+      </header>
+      <nav class="plate-menu" aria-label="Select a research project">
+        {% for project in site.data.atlas_projects %}
+          <a href="#{{ project.id }}" data-plate="{{ project.id }}"
+            ><span class="project-name">{{ project.name }}</span><span class="project-topic">{{ project.topic }}</span></a
+          >
+        {% endfor %}
+      </nav>
+      {% for project in site.data.atlas_projects %}
+        {% assign image = project.id | append: '.jpg' | prepend: '/assets/research/' | relative_url %}
+        <article class="plate" id="{{ project.id }}" aria-labelledby="{{ project.id }}-title">
+          <figure>
+            <a class="figure-mount" href="{{ image }}" aria-label="Open the full-size {{ project.name }} figure"
+              ><img src="{{ image }}" alt="{{ project.alt | escape }}"
+            ></a>
+            <figcaption>
+              <span class="figure-index">{{ project.name }}</span><span>{{ project.caption }}</span>
+            </figcaption>
+          </figure>
+          <div class="plate-copy">
+            <p class="venue">{{ project.venue }}</p>
+            <h3 id="{{ project.id }}-title">{{ project.title }}</h3>
+            <p>{{ project.description }}</p>
+            <div class="paper-links">
+              <a href="{{ project.paper }}">Read paper ↗</a><a href="https://github.com/{{ site.github_username }}/{{ project.name }}">Code ↗</a>
+            </div>
+          </div>
+        </article>
+      {% endfor %}
+    </section>
+    <div class="home-updates">
+      <section aria-labelledby="home-news">
+        <div class="home-heading">
+          <h2 id="home-news">News</h2>
+          <a href="{{ '/news/' | relative_url }}">All updates →</a>
+        </div>
+        <ul class="home-news">
+          {% assign updates = site.news | sort: 'date' | reverse %}
+          {% for item in updates limit: 4 %}
+            <li>
+              <time datetime="{{ item.date | date_to_xmlschema }}">{{ item.date | date: '%d %b %Y' }}</time
+              ><a href="{{ item.url | relative_url }}">{{ item.title | escape }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      </section>
+      <section aria-labelledby="home-code">
+        <div class="home-heading">
+          <h2 id="home-code">Research code</h2>
+          <a href="{{ '/repositories/' | relative_url }}">All code →</a>
+        </div>
+        <ul class="home-code">
+          {% for repo in site.data.repositories.github_repos %}
+            {% assign slug = repo | split: '/' | last %}
+            <li>
+              <a href="https://github.com/{{ repo }}">
+                {{- slug }}
+                <span aria-hidden="true">↗</span></a
+              >
+            </li>
+          {% endfor %}
+        </ul>
+      </section>
+    </div>
+    <section class="selected" aria-labelledby="home-papers">
+      <div class="home-heading">
+        <h2 id="home-papers">Selected publications</h2>
+        <a href="{{ '/publications/' | relative_url }}">All publications →</a>
+      </div>
+      {% bibliography --template atlas-selected --group_by none --query @*[selected=true]* %}
+    </section>
+  </div>
+</div>

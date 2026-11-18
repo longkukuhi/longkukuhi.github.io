@@ -1,0 +1,49 @@
+---
+---
+{% assign url = entry.html %}
+{% if entry.doi %}
+  {% assign url = entry.doi | prepend: 'https://doi.org/' %}
+{% endif %}
+<article class="paper-record" id="{{ entry.key | escape }}" data-year="{{ entry.year | escape }}">
+  <p class="paper-venue-abbr">{{ entry.abbr | escape }}</p>
+  <div class="paper-citation">
+    <h3>
+      {% if url -%}
+        <a href="{{ url | escape }}">{{ entry.title }}</a>
+      {%- else -%}
+        {{- entry.title -}}
+      {%- endif %}
+    </h3>
+    <p class="paper-authors">{% include atlas_publications.liquid authors=entry.author_array %}</p>
+    <p class="paper-venue">
+      {{ entry.journal | default: entry.booktitle | escape }} · {{ entry.year | escape }}
+      {%- if entry.volume %} · vol. {{ entry.volume | escape }}{% endif -%}
+      {%- if entry.number %}, no. {{ entry.number | escape }}{% endif -%}
+      {%- if entry.pages %} · pp. {{ entry.pages | replace: '--', '–' | escape }}{% endif -%}
+      {%- if entry.eid %} · article {{ entry.eid | escape }}{% endif -%}
+    </p>
+    {% if entry.note %}
+      <p class="paper-note">{{ entry.note | escape }}</p>
+    {% endif %}
+    <div class="paper-links">
+      {% if url -%}
+        <a href="{{ url | escape }}">Paper <span aria-hidden="true">↗</span></a>
+      {%- endif %}
+      {% if entry.html and entry.html != url -%}
+        <a href="{{ entry.html | escape }}">Repository copy <span aria-hidden="true">↗</span></a>
+      {%- endif %}
+      {% if entry.arxiv -%}
+        <a href="https://arxiv.org/abs/{{ entry.arxiv | escape }}">arXiv <span aria-hidden="true">↗</span></a>
+      {%- endif %}
+      {% if entry.code -%}
+        <a class="paper-code" href="{{ entry.code | escape }}">Code <span aria-hidden="true">↗</span></a>
+      {%- endif %}
+    </div>
+    {% if entry.bibtex_show %}
+      <details class="paper-bib">
+        <summary>BibTeX</summary>
+        <pre><code>{{ entry.bibtex | hideCustomBibtex | escape }}</code></pre>
+      </details>
+    {% endif %}
+  </div>
+</article>

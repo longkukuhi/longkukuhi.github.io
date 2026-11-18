@@ -1,0 +1,9 @@
+{%- for author in include.authors -%}
+  {%- unless forloop.first %}, {% endunless -%}
+  {%- assign name = author.first | append: ' ' | append: author.last | strip -%}
+  {%- if site.scholar.last_name contains author.last and site.scholar.first_name contains author.first -%}
+    <strong>{{ name | escape }}</strong>
+  {%- else -%}
+    {{ name | escape }}
+  {%- endif -%}
+{%- endfor -%}

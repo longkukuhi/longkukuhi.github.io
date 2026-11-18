@@ -1,5 +1,7 @@
 ---
-layout: post
+layout: atlas_news_item
+atlas_css: /assets/css/atlas-resources.css
+title: SFDB-ViT and the RoboEye proceedings paper
 date: 2026-11-18
 inline: true
 related_posts: false

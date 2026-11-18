@@ -1,0 +1,88 @@
+---
+layout: atlas
+permalink: /about/
+title: About
+description: Zijun Long’s research, academic appointment and education.
+atlas_css: /assets/css/atlas-profile.css
+---
+
+<article class="atlas-background" aria-labelledby="about-title">
+  <header class="background-heading">
+    <h1 id="about-title">About <em>Zijun Long</em></h1>
+    <p>
+      I am an Assistant Professor at Hunan University. I study how machines use language and images to find objects, identify them and detect defects.
+    </p>
+  </header>
+
+  <section class="background-section" aria-labelledby="research-heading">
+    <h2 id="research-heading">Research</h2>
+    <div class="background-copy">
+      <p>
+        In interactive image retrieval, I study how a search system can use each new description to refine its results. In robotic perception and
+        industrial inspection, I work on recognising objects and locating defects using visual references.
+      </p>
+      <p>
+        I am particularly interested in reliable vision–language models and in adapting them with limited data or training. I have published 16
+        peer-reviewed papers as first, co-first or corresponding author, including work at ICML, ECCV, SIGIR and ICRA.
+      </p>
+      <p class="background-links">
+        <a href="{{ '/publications/' | relative_url }}">Publications</a> <a href="{{ '/repositories/' | relative_url }}">Research code</a>
+      </p>
+    </div>
+  </section>
+
+  <section class="background-section" aria-labelledby="appointment-heading">
+    <h2 id="appointment-heading">Appointment</h2>
+    <div class="background-copy">
+      <p class="background-date">Since January 2025</p>
+      <h3>Assistant Professor · Hunan University</h3>
+      <p>I teach undergraduate and postgraduate courses and supervise student research at the College of Electrical and Information Engineering.</p>
+      <p class="background-links">
+        <a href="https://eeit.hnu.edu.cn/info/1969/10714.htm">University profile</a>
+        <a href="{{ '/teaching/' | relative_url }}">Teaching and service</a>
+      </p>
+    </div>
+  </section>
+
+  <section class="background-section" aria-labelledby="education-heading">
+    <h2 id="education-heading">Education</h2>
+    <div class="background-copy">
+      <ul class="background-records" role="list">
+        <li>
+          <p class="background-date">November 2020 – March 2025</p>
+          <h3>PhD in Computer Science · University of Glasgow</h3>
+          <p>
+            I worked with Richard McCreadie and Gerardo Aragon-Camarasa on how to align representations of images and text. My PhD was awarded in
+            March 2025.
+          </p>
+          <p class="background-links">
+            <a href="https://theses.gla.ac.uk/84814/">Doctoral thesis</a>
+            <a href="https://www.gla.ac.uk/schools/computing/research/researchsections/ida-section/informationretrieval/"
+              >Glasgow Information Retrieval Group</a
+            >
+          </p>
+        </li>
+        <li>
+          <p class="background-date">September 2019 – November 2020</p>
+          <h3>MSc in Data Science · University of Glasgow</h3>
+        </li>
+        <li>
+          <p class="background-date">September 2015 – June 2019</p>
+          <h3>BEng in Software Engineering · South China University of Technology</h3>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section class="background-section" aria-labelledby="contact-heading">
+    <h2 id="contact-heading">Contact</h2>
+    <div class="background-copy">
+      <p>Email is the best way to reach me about research and student supervision.</p>
+      <p class="background-links">
+        <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+        <a href="https://scholar.google.com/citations?user={{ site.scholar_userid }}">Google Scholar</a>
+        <a href="https://github.com/{{ site.github_username }}">GitHub</a> <a href="https://orcid.org/0000-0002-2008-960X">ORCID</a>
+        <a href="https://x.com/{{ site.x_username }}">X</a>
+      </p>
+    </div>
+  </section>
+</article>
